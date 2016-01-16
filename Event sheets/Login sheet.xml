@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Login sheet</name>
+    <events>
+        <variable constant="0" name="loginResponse" sid="7802361309208318" static="0" type="text"></variable>
+        <variable constant="0" name="loginId" sid="1263477606183212" static="0" type="text"></variable>
+        <event-block sid="6024348682044844">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4430426968614788" type="Touch">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1877720098155416" type="Text">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="1623034424208739" type="AJAX">
+                    <param id="0" name="Tag">&quot;Login&quot;</param>
+                    <param id="1" name="URL">&quot;http://veskod.comli.com/login1.php?L=&quot;&amp; Username.Text &amp;&quot;&amp;P=&quot;&amp; Password.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2077818428101379">
+            <conditions>
+                <condition id="0" name="On completed" sid="861780817319926" type="AJAX">
+                    <param id="0" name="Tag">&quot;Login&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2478860575469395" type="System">
+                    <param id="0" name="Variable">loginResponse</param>
+                    <param id="1" name="Value">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="359870912832744">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1718878041315641" type="System">
+                            <param id="0" name="Variable">loginResponse</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="855947455772848" type="Text">
+                            <param id="0" name="Text">&quot;Success!&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9387546735891879" type="System">
+                            <param id="0" name="Variable">loginId</param>
+                            <param id="1" name="Value">AJAX.LastData</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9677617124296432" type="Username">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3070055081817042" type="Password">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="970776130447717">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9442641188613306" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3832461887228693" type="Text">
+                            <param id="0" name="Text">&quot;User not found!&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3366518189354527" type="Username">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7114308103348404" type="Password">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
