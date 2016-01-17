@@ -60,10 +60,10 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\Hrisi\Desktop\backgroundone.jpg" />
         </object-type>
-        <object-type name="Text" sid="9472642975219895">
+        <object-type name="Response" sid="9472642975219895">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite" sid="2968981801453787">
+        <object-type name="Play" sid="2968981801453787">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7241182095521298" speed="5">
@@ -82,13 +82,61 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="userId" sid="7914549945266608">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Confirm" sid="6366386022701085">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Register" sid="9855661584886371">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5023341376472286" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Hrisi\Desktop\Register-Button.png">
+                        <collision-poly>
+                            <point x="0.0206186" y="0.0740741" />
+                            <point x="0.5" y="0.00462963" />
+                            <point x="0.979381" y="0.0740741" />
+                            <point x="0.997423" y="0.5" />
+                            <point x="0.979381" y="0.925926" />
+                            <point x="0.5" y="0.99537" />
+                            <point x="0.0206186" y="0.925926" />
+                            <point x="0.00257732" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Back" sid="3578217615317393">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4754593693629123" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Hrisi\Desktop\Back-Button.png">
+                        <collision-poly>
+                            <point x="0.0206186" y="0.0740741" />
+                            <point x="0.5" y="0.00462963" />
+                            <point x="0.979381" y="0.0740741" />
+                            <point x="0.997423" y="0.5" />
+                            <point x="0.979381" y="0.925926" />
+                            <point x="0.5" y="0.99537" />
+                            <point x="0.0206186" y="0.925926" />
+                            <point x="0.00257732" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Login.xml</layout>
+        <layout>Game.xml</layout>
+        <layout>Register.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Login sheet.xml</event-sheet>
+        <event-sheet>Game sheet.xml</event-sheet>
+        <event-sheet>Register sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="5" />

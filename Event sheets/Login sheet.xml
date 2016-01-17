@@ -8,16 +8,22 @@
         <event-block sid="6024348682044844">
             <conditions>
                 <condition id="3" name="On touched object" sid="4430426968614788" type="Touch">
-                    <param id="0" name="Object">Sprite</param>
+                    <param id="0" name="Object">Play</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="1877720098155416" type="Text">
+                <action id="0" name="Set text" sid="1877720098155416" type="Response">
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
                 <action id="0" name="Request URL" sid="1623034424208739" type="AJAX">
                     <param id="0" name="Tag">&quot;Login&quot;</param>
                     <param id="1" name="URL">&quot;http://veskod.comli.com/login1.php?L=&quot;&amp; Username.Text &amp;&quot;&amp;P=&quot;&amp; Password.Text</param>
+                </action>
+                <action disabled="1" id="2" name="Post to URL" sid="1835099836867696" type="AJAX">
+                    <param id="0" name="Tag">&quot;Login&quot;</param>
+                    <param id="1" name="URL">&quot;veskod.comli.com/login1.php&quot;</param>
+                    <param id="2" name="Data">&quot;L=&quot;&amp; URLEncode(Username.Text)&amp;&quot;P=&quot;&amp;URLEncode(Password.Text)</param>
+                    <param id="3" name="Method">&quot;POST&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -32,6 +38,9 @@
                     <param id="0" name="Variable">loginResponse</param>
                     <param id="1" name="Value">AJAX.LastData</param>
                 </action>
+                <action disabled="1" id="0" name="Set text" sid="4335212546600137" type="Response">
+                    <param id="0" name="Text">AJAX.LastData</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="359870912832744">
@@ -43,7 +52,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="855947455772848" type="Text">
+                        <action disabled="1" id="0" name="Set text" sid="855947455772848" type="Response">
                             <param id="0" name="Text">&quot;Success!&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="9387546735891879" type="System">
@@ -56,6 +65,9 @@
                         <action id="0" name="Set text" sid="3070055081817042" type="Password">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
+                        <action id="-2" name="Go to layout" sid="6391276327699534" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="970776130447717">
@@ -63,7 +75,7 @@
                         <condition id="-22" name="Else" sid="9442641188613306" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="3832461887228693" type="Text">
+                        <action id="0" name="Set text" sid="3832461887228693" type="Response">
                             <param id="0" name="Text">&quot;User not found!&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="3366518189354527" type="Username">
@@ -75,6 +87,18 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="9213437789167597">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6445631860576211" type="Touch">
+                    <param id="0" name="Object">Register</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2984448194489307" type="System">
+                    <param id="0" name="Layout">Register</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
