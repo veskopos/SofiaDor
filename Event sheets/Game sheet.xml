@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game sheet</name>
     <events>
-        <variable constant="0" name="EachX" sid="3377731385119322" static="0" type="number">0</variable>
         <variable constant="0" name="userId" sid="6551099198431974" static="0" type="text"></variable>
         <event-block sid="4916116246372293">
             <conditions>
@@ -46,6 +45,9 @@
                 <action id="-15" name="Set visible" sid="7623305909251917" type="userId">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="6310496091991883" type="wins">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" inactive="1" sid="2600290690023908" title="Do Array">
@@ -62,7 +64,10 @@
                             <param id="1" name="Value">tokenat(Ajax.LastData, Array.CurX, &quot;|&quot;)</param>
                         </action>
                         <action id="0" name="Set text" sid="80665043178697" type="userId">
-                            <param id="0" name="Text">&quot;Hello &quot; &amp;Array.At(0) &amp;&quot; &quot; &amp;Array.At(1)</param>
+                            <param id="0" name="Text">&quot;Hello &quot; &amp;Array.At(0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="299901089930464" type="wins">
+                            <param id="0" name="Text"> &quot;You have:&quot;&amp;Array.At(1)&amp;&quot; wins&quot;</param>
                         </action>
                     </actions>
                 </event-block>
