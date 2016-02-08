@@ -149,6 +149,12 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Intro" sid="7932251599212272">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="wins" sid="4224300139924422">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
