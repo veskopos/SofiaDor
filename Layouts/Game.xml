@@ -78,7 +78,7 @@
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <line-height>20</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -86,8 +86,8 @@
                         <x>86</x>
                         <y>200</y>
                         <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
+                        <width>591</width>
+                        <height>59</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -117,6 +117,60 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Intro" uid="22">
+                    <properties>
+                        <text>In the game you must answer the questions in the form of quiz, there will be only one correct answer. For each one you will receive points.</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-37,700,1</font>
+                        <color>255,255,102</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>656</x>
+                        <y>354</y>
+                        <z>0</z>
+                        <width>604</width>
+                        <height>268</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="wins" uid="23">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial,-40,700,0</font>
+                        <color>255,255,102</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>86</x>
+                        <y>260</y>
+                        <z>0</z>
+                        <width>591</width>
+                        <height>59</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -124,7 +178,7 @@
     <nonworld-instances>
         <instance type="Array" uid="20">
             <properties>
-                <width>300</width>
+                <width>10</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>
