@@ -17,8 +17,11 @@
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -152,8 +155,85 @@
         <object-type name="Intro" sid="7932251599212272">
             <plugin id="Text" />
         </object-type>
-        <object-type name="wins" sid="4224300139924422">
+        <object-type name="score" sid="4224300139924422">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite" sid="188705502587174">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5643819973765781" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Highscore" sid="5246471672549192">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8725387005932539" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Hrisi\Desktop\QA.png">
+                        <collision-poly>
+                            <point x="0.0206186" y="0.0740741" />
+                            <point x="0.5" y="0.00462963" />
+                            <point x="0.979381" y="0.0740741" />
+                            <point x="0.997423" y="0.5" />
+                            <point x="0.979381" y="0.925926" />
+                            <point x="0.5" y="0.99537" />
+                            <point x="0.0206186" y="0.925926" />
+                            <point x="0.00257732" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Question" sid="3513893983699997">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Answer1" sid="4697066337704826">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Answer2" sid="7589028149349786">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Answer3" sid="3295119900965601">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Answer4" sid="3858315583765478">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CorrectAnswer" sid="4726115355396304">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Timer" sid="8112926174105886">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ProgressBar" sid="4747777821772147">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="number1" sid="1369018782809295">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="number2" sid="3936729894030972">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="number3" sid="7067278350515719">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="number4" sid="4656248690621897">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="number5" sid="1330163189627602">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text6" sid="4242301659164456">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TOP5" sid="3868519552338019">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="arrayHighscore" sid="1148843795061175">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families />
@@ -162,12 +242,14 @@
         <layout>Game.xml</layout>
         <layout>Register.xml</layout>
         <layout>Highscore.xml</layout>
+        <layout>Quiz.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Login sheet.xml</event-sheet>
         <event-sheet>Game sheet.xml</event-sheet>
         <event-sheet>Register sheet.xml</event-sheet>
-        <event-sheet>Highscore.xml</event-sheet>
+        <event-sheet>Highscore sheet.xml</event-sheet>
+        <event-sheet>Quiz sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="5" />
