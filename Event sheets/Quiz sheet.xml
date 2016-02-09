@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Quiz sheet</name>
+    <events>
+        <event-block sid="2792633300121215">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="2835908281871758" type="Question" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9087280588418588" type="Question">
+                    <param id="0" name="Text">&quot;Има ли метро в София?&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="939942233248568" type="Answer1">
+                    <param id="0" name="Text">&quot;Да&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7295135956103511" type="Answer1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="5135699307270521" type="Answer2">
+                    <param id="0" name="Text">&quot;Не&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9744030024921655" type="Answer2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8054487819094295">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8939450836287251" type="Touch">
+                    <param id="0" name="Object">Answer1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set font color" sid="998814912977849" type="Answer1">
+                    <param id="0" name="Color">rgb(0, 0, 255)</param>
+                </action>
+                <action id="4" name="Set font color" sid="7437218077422221" type="Answer2">
+                    <param id="0" name="Color">rgb(0, 0, 0)</param>
+                </action>
+                <action id="0" name="Set text" sid="1299872287752998" type="CorrectAnswer">
+                    <param id="0" name="Text">&quot;Correct&quot;</param>
+                </action>
+                <action id="4" name="Set font color" sid="5020172429319419" type="CorrectAnswer">
+                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7813556825383972" type="CorrectAnswer">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="361577219438133">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2323548084413223" type="Touch">
+                    <param id="0" name="Object">Answer2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set font color" sid="5674514012950656" type="Answer2">
+                    <param id="0" name="Color">rgb(0, 0, 255)</param>
+                </action>
+                <action id="4" name="Set font color" sid="3714176687738592" type="Answer1">
+                    <param id="0" name="Color">rgb(0, 0, 0)</param>
+                </action>
+                <action id="0" name="Set text" sid="2403183644026259" type="CorrectAnswer">
+                    <param id="0" name="Text">&quot;Wrong&quot;</param>
+                </action>
+                <action id="4" name="Set font color" sid="3704010769260432" type="CorrectAnswer">
+                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5607916480714484" type="CorrectAnswer">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
