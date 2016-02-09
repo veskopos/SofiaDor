@@ -45,7 +45,7 @@
                 <action id="-15" name="Set visible" sid="7623305909251917" type="userId">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="6310496091991883" type="wins">
+                <action id="-15" name="Set visible" sid="6310496091991883" type="score">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
@@ -66,8 +66,8 @@
                         <action id="0" name="Set text" sid="80665043178697" type="userId">
                             <param id="0" name="Text">&quot;Hello &quot; &amp;Array.At(0)</param>
                         </action>
-                        <action id="0" name="Set text" sid="299901089930464" type="wins">
-                            <param id="0" name="Text"> &quot;You have:&quot;&amp;Array.At(1)&amp;&quot; wins&quot;</param>
+                        <action id="0" name="Set text" sid="299901089930464" type="score">
+                            <param id="0" name="Text"> &quot;You have:&quot;&amp;Array.At(1)&amp;&quot; score&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -94,5 +94,17 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="4801446587340765">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8974900397656541" type="Touch">
+                    <param id="0" name="Object">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7715494687555641" type="System">
+                    <param id="0" name="Layout">Quiz</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
