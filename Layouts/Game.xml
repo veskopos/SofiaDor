@@ -70,7 +70,7 @@
             <instances>
                 <instance type="userId" uid="8">
                     <properties>
-                        <text>Text</text>
+                        <text>Name</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-40,700,0</font>
                         <color>255,255,102</color>
@@ -144,9 +144,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="wins" uid="23">
+                <instance type="score" uid="23">
                     <properties>
-                        <text>Text</text>
+                        <text>Score</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-40,700,0</font>
                         <color>255,255,102</color>
@@ -167,6 +167,50 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Play" uid="25">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1461</x>
+                        <y>391</y>
+                        <z>0</z>
+                        <width>774</width>
+                        <height>216</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504629612</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Logo" uid="27">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>960.304016113</x>
+                        <y>200.5</y>
+                        <z>0</z>
+                        <width>1052</width>
+                        <height>190</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500288546</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
