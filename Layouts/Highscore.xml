@@ -2,7 +2,7 @@
 <c2layout>
     <name>Highscore</name>
     <sid>9773027308102915</sid>
-    <event-sheet>Highscore</event-sheet>
+    <event-sheet>Highscore sheet</event-sheet>
     <size>
         <width>1920</width>
         <height>1080</height>
@@ -90,10 +90,202 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Highscore" uid="35">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>976</x>
+                        <y>510</y>
+                        <z>0</z>
+                        <width>1160</width>
+                        <height>838</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="number1" uid="36">
+                    <properties>
+                        <text>1. </text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-33,700,1</font>
+                        <color>0,153,204</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>833</x>
+                        <y>350</y>
+                        <z>0</z>
+                        <width>604</width>
+                        <height>59</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="number2" uid="37">
+                    <properties>
+                        <text>2. </text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-33,700,1</font>
+                        <color>0,153,204</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>833</x>
+                        <y>458</y>
+                        <z>0</z>
+                        <width>255</width>
+                        <height>59</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="number3" uid="38">
+                    <properties>
+                        <text>3. </text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-33,700,1</font>
+                        <color>0,153,204</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>833</x>
+                        <y>566</y>
+                        <z>0</z>
+                        <width>255</width>
+                        <height>59</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="number4" uid="39">
+                    <properties>
+                        <text>4. </text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-33,700,1</font>
+                        <color>0,153,204</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>833</x>
+                        <y>673</y>
+                        <z>0</z>
+                        <width>255</width>
+                        <height>59</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="number5" uid="40">
+                    <properties>
+                        <text>5. </text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-33,700,1</font>
+                        <color>0,153,204</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>833</x>
+                        <y>781</y>
+                        <z>0</z>
+                        <width>255</width>
+                        <height>59</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TOP5" uid="41">
+                    <properties>
+                        <text>TOP 5</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-60,700,1</font>
+                        <color>102,255,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>537</x>
+                        <y>215</y>
+                        <z>0</z>
+                        <width>802</width>
+                        <height>144</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="arrayHighscore" uid="44">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>
