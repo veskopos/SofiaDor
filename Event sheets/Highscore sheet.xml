@@ -4,7 +4,7 @@
     <name>Highscore sheet</name>
     <events>
         <variable constant="0" name="EachX" sid="3741106121431128" static="0" type="number">0</variable>
-        <event-block sid="6730678578124486">
+        <event-block disabled="1" sid="6730678578124486">
             <conditions>
                 <condition id="3" name="On touched object" sid="5160013231475634" type="Touch">
                     <param id="0" name="Object">Back</param>
@@ -16,6 +16,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="1219238748839229">
+            <conditions>
+                <condition id="0" name="On clicked" sid="9133019620723495" type="backButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5807115856759854" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="895601082981473">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7753306222935728" type="System" />
@@ -23,7 +33,7 @@
             <actions>
                 <action id="0" name="Request URL" sid="9893223044930632" type="AJAX">
                     <param id="0" name="Tag">&quot;getScores&quot;</param>
-                    <param id="1" name="URL">&quot;http://veskod.comli.com/getscores.php&quot;</param>
+                    <param id="1" name="URL">&quot;http://veskod.comli.com/php/getscores.php&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -81,5 +91,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="9211461172906905">
+            <conditions>
+                <condition id="-20" name="Is on mobile device" sid="3707267761756874" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Remove CSS file" sid="5532097210365346" type="CSSImport">
+                    <param id="0" name="CSS remove">&quot;vesko.css&quot;</param>
+                </action>
+                <action id="0" name="Import CSS file" sid="5608105991954647" type="CSSImport">
+                    <param id="0" name="CSS import">&quot;mobile.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
