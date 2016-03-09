@@ -4,7 +4,7 @@
     <name>Game sheet</name>
     <events>
         <variable constant="0" name="userId" sid="6551099198431974" static="0" type="text"></variable>
-        <event-block sid="4916116246372293">
+        <event-block disabled="1" sid="4916116246372293">
             <conditions>
                 <condition id="3" name="On touched object" sid="6920797141819945" type="Touch">
                     <param id="0" name="Object">Back</param>
@@ -12,6 +12,16 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="1413178391756759" type="System">
+                    <param id="0" name="Layout">Login</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="163046208175095">
+            <conditions>
+                <condition id="0" name="On clicked" sid="7807576239786212" type="backButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2672371758127372" type="System">
                     <param id="0" name="Layout">Login</param>
                 </action>
             </actions>
@@ -27,7 +37,7 @@
                 </action>
                 <action id="0" name="Request URL" sid="1449678351499574" type="AJAX">
                     <param id="0" name="Tag">&quot;getID&quot;</param>
-                    <param id="1" name="URL">&quot;http://veskod.comli.com/getID.php?id=&quot; &amp;userId</param>
+                    <param id="1" name="URL">&quot;http://veskod.comli.com/php/getID.php?id=&quot; &amp;userId</param>
                 </action>
             </actions>
         </event-block>
@@ -94,7 +104,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="4801446587340765">
+        <event-block disabled="1" sid="4801446587340765">
             <conditions>
                 <condition id="3" name="On touched object" sid="8974900397656541" type="Touch">
                     <param id="0" name="Object">Play</param>
@@ -103,6 +113,29 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="7715494687555641" type="System">
                     <param id="0" name="Layout">Quiz</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1577613428837932">
+            <conditions>
+                <condition id="0" name="On clicked" sid="6347649019742528" type="PlayButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9812997943597486" type="System">
+                    <param id="0" name="Layout">Category</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7814090798803388">
+            <conditions>
+                <condition id="-20" name="Is on mobile device" sid="4257144209742619" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Remove CSS file" sid="7962054239932939" type="CSSImport">
+                    <param id="0" name="CSS remove">&quot;vesko.css&quot;</param>
+                </action>
+                <action id="0" name="Import CSS file" sid="8169414754920194" type="CSSImport">
+                    <param id="0" name="CSS import">&quot;mobile.css&quot;</param>
                 </action>
             </actions>
         </event-block>
