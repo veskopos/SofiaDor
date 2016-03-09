@@ -2,7 +2,7 @@
 <c2layout>
     <name>Quiz</name>
     <sid>6505596834848687</sid>
-    <event-sheet>Quiz sheet</event-sheet>
+    <event-sheet>Quiz</event-sheet>
     <size>
         <width>1920</width>
         <height>1080</height>
@@ -248,6 +248,33 @@
                         <z>0</z>
                         <width>693</width>
                         <height>111</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="responeScore" uid="42">
+                    <properties>
+                        <text>Your score is: 0</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-40,700,0</font>
+                        <color>255,255,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>142</x>
+                        <y>90</y>
+                        <z>0</z>
+                        <width>464</width>
+                        <height>104</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
