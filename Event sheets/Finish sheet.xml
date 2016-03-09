@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Finish sheet</name>
+    <events>
+        <variable comment="adding local score to global score" constant="0" name="localScore" sid="3513195372795751" static="0" type="number">0</variable>
+        <event-block sid="4687588744236587">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="652784515831718" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9627491367674334" type="score">
+                    <param id="0" name="Text"> &quot;You have: &quot;&amp;score&amp;&quot; score&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="1122839773139333" type="AJAX">
+                    <param id="0" name="Tag">&quot;getID&quot;</param>
+                    <param id="1" name="URL">&quot;http://veskod.comli.com/php/getID.php?id=&quot; &amp;userId</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3331554512638717">
+            <conditions>
+                <condition id="0" name="On completed" sid="9680547603493164" type="AJAX">
+                    <param id="0" name="Tag">&quot;getID&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="7645480672844482" type="System">
+                    <param id="0" name="Group name">&quot;Score&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5664378543527515" type="userId">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1428881666456951" type="score">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="4392612504516518" title="Score">
+            <sub-events>
+                <event-block sid="6174173615283012">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="4031276091091252" type="Array">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="7162632247492904" type="Array">
+                            <param id="0" name="X">Array.CurX</param>
+                            <param id="1" name="Value">tokenat(Ajax.LastData, Array.CurX, &quot;|&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="80665043178697" type="userId">
+                            <param id="0" name="Text">&quot;Congratulations &quot;&amp;Array.At(0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="299901089930464" type="score">
+                            <param id="0" name="Text"> &quot;You have: &quot;&amp;score&amp;&quot; score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="2508415317597751">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="1699397223976827" type="System">
+                            <param id="0" name="Object">userId</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8694372874951023" type="userId">
+                            <param id="0" name="Text">Array.At(userId.IID)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="712306325684443">
+                    <conditions />
+                    <actions>
+                        <action id="-12" name="Set group active" sid="2062862513244761" type="System">
+                            <param id="0" name="Group name">&quot;Score&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="9329470969861635">
+            <conditions>
+                <condition id="0" name="On clicked" sid="4657483275356766" type="postScore" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3129175652325409" type="System">
+                    <param id="0" name="Variable">localScore</param>
+                    <param id="1" name="Value">Array.At(1)</param>
+                </action>
+                <action id="-10" name="Add to" sid="9417008416565703" type="System">
+                    <param id="0" name="Variable">localScore</param>
+                    <param id="1" name="Value">score</param>
+                </action>
+                <action id="0" name="Request URL" sid="2519932209596359" type="AJAX">
+                    <param id="0" name="Tag">&quot;saveScore&quot;</param>
+                    <param id="1" name="URL">&quot;http://veskod.comli.com/php/savescores.php?name=&quot;&amp;Array.At(0)&amp;&quot;&amp;score=&quot;&amp;localScore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3253012556785022">
+            <conditions>
+                <condition id="0" name="On completed" sid="9073717886982905" type="AJAX">
+                    <param id="0" name="Tag">&quot;saveScore&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8077960597181963" type="System">
+                    <param id="0" name="Layout">Highscore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="587136532293885">
+            <conditions>
+                <condition id="0" name="On clicked" sid="6873744485043325" type="backButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2362546861616732" type="System">
+                    <param id="0" name="Layout">Category</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2751535640848932">
+            <conditions>
+                <condition id="-20" name="Is on mobile device" sid="1861908232135986" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Remove CSS file" sid="2202645394384131" type="CSSImport">
+                    <param id="0" name="CSS remove">&quot;vesko.css&quot;</param>
+                </action>
+                <action id="0" name="Import CSS file" sid="4004747223783876" type="CSSImport">
+                    <param id="0" name="CSS import">&quot;mobile.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
