@@ -10,12 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Login</layout>
-        <layout order="2">Quiz</layout>
-        <layout active="1" order="4">Highscore</layout>
-        <event-sheet order="1">Game sheet</event-sheet>
-        <event-sheet order="3">Quiz sheet</event-sheet>
-        <event-sheet order="5">Highscore sheet</event-sheet>
+        <layout order="1">Login</layout>
+        <event-sheet order="2">Geography Quiz sheet</event-sheet>
+        <event-sheet order="3">History Quiz sheet</event-sheet>
+        <event-sheet order="4">Music Quiz sheet</event-sheet>
+        <event-sheet order="5">Sport Quiz sheet</event-sheet>
+        <event-sheet order="6">Game sheet</event-sheet>
+        <event-sheet active="1" order="7">Finish sheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -25,7 +26,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1" />
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -36,7 +37,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Register/" />
         <folder expanded="1" path="animation-folder/Back/" />
         <folder expanded="1" path="animation-folder/Logo/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Highscore/" />
     </folders-expanded>
 </c2uistate>

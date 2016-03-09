@@ -12,6 +12,8 @@
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="McKack" id="CSS_import" version="1">CSS import</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
@@ -32,6 +34,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Login</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -43,7 +46,7 @@
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -158,14 +161,6 @@
         <object-type name="score" sid="4224300139924422">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite" sid="188705502587174">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5643819973765781" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Highscore" sid="5246471672549192">
             <plugin id="Sprite" />
             <animation-folder>
@@ -226,14 +221,50 @@
         <object-type name="number5" sid="1330163189627602">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text6" sid="4242301659164456">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="TOP5" sid="3868519552338019">
             <plugin id="Text" />
         </object-type>
         <object-type global="1" name="arrayHighscore" sid="1148843795061175">
             <plugin id="Arr" />
+        </object-type>
+        <object-type name="responeScore" sid="3572856307150457">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="CSSImport" sid="6460264675756043">
+            <plugin id="CSS_import" />
+        </object-type>
+        <object-type name="categoryButton2" sid="9854758020454174">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="categoryButton" sid="9706495526753977">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="categoryButton3" sid="8800738440174198">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="categoryButton4" sid="6469052233714909">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="PlayButton" sid="9272366507659191">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="registerButton" sid="283069860392405">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="backButton" sid="1383275507327555">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Finish" sid="4218218441268818">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="postScore" sid="4826671194649582">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="TryAgain" sid="3506175844917757">
+            <plugin id="Button" />
+        </object-type>
+        <object-type global="1" name="Version" sid="1406019574812796">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
@@ -243,13 +274,21 @@
         <layout>Register.xml</layout>
         <layout>Highscore.xml</layout>
         <layout>Quiz.xml</layout>
+        <layout>Category.xml</layout>
+        <layout>Finish.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Login sheet.xml</event-sheet>
         <event-sheet>Game sheet.xml</event-sheet>
         <event-sheet>Register sheet.xml</event-sheet>
         <event-sheet>Highscore sheet.xml</event-sheet>
-        <event-sheet>Quiz sheet.xml</event-sheet>
+        <event-sheet>Geography Quiz sheet.xml</event-sheet>
+        <event-sheet>Category sheet.xml</event-sheet>
+        <event-sheet>Finish sheet.xml</event-sheet>
+        <event-sheet>History Quiz sheet.xml</event-sheet>
+        <event-sheet>Quiz.xml</event-sheet>
+        <event-sheet>Sport Quiz sheet.xml</event-sheet>
+        <event-sheet>Music Quiz sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="AJAX" uid="5" />
@@ -270,5 +309,7 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="vesko.css" />
+        <file name="mobile.css" />
     </files-folder>
 </c2project>
