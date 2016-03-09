@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Category sheet</name>
+    <events>
+        <event-block sid="7736867916181727">
+            <conditions>
+                <condition id="0" name="On clicked" sid="5851253706983111" type="categoryButton" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="9186271403601792" type="System">
+                    <param id="0" name="Group name">&quot;GeoQuestion1&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="451905370776663" type="System">
+                    <param id="0" name="Layout">Quiz</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5740413117562821">
+            <conditions>
+                <condition id="0" name="On clicked" sid="7190365651350904" type="categoryButton2" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="7691146808903687" type="System">
+                    <param id="0" name="Group name">&quot;HistoryQuestion1&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="1917420082486317" type="System">
+                    <param id="0" name="Layout">Quiz</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4282236567497067">
+            <conditions>
+                <condition id="0" name="On clicked" sid="3394509492214053" type="categoryButton3" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="2842795515595614" type="System">
+                    <param id="0" name="Group name">&quot;SportQuestion1&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7561653673137049" type="System">
+                    <param id="0" name="Layout">Quiz</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="502741486889686">
+            <conditions>
+                <condition id="0" name="On clicked" sid="3789182506230057" type="categoryButton4" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="3916388611313189" type="System">
+                    <param id="0" name="Group name">&quot;MusicQuestion1&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="8068892000106456" type="System">
+                    <param id="0" name="Layout">Quiz</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="311269827680458">
+            <conditions>
+                <condition id="0" name="On clicked" sid="4494568578065868" type="backButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9241917880681644" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6016669125994615">
+            <conditions>
+                <condition id="-20" name="Is on mobile device" sid="958194008699252" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Remove CSS file" sid="3021334520040697" type="CSSImport">
+                    <param id="0" name="CSS remove">&quot;vesko.css&quot;</param>
+                </action>
+                <action id="0" name="Import CSS file" sid="1454314012196829" type="CSSImport">
+                    <param id="0" name="CSS import">&quot;mobile.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
