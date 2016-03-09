@@ -5,9 +5,9 @@
     <events>
         <variable constant="0" name="loginResponse" sid="7802361309208318" static="0" type="text"></variable>
         <variable constant="0" name="loginId" sid="1263477606183212" static="0" type="text"></variable>
-        <event-block sid="6024348682044844">
+        <event-block disabled="1" sid="6024348682044844">
             <conditions>
-                <condition id="3" name="On touched object" sid="4430426968614788" type="Touch">
+                <condition disabled="1" id="3" name="On touched object" sid="4430426968614788" type="Touch">
                     <param id="0" name="Object">Play</param>
                 </condition>
             </conditions>
@@ -24,6 +24,24 @@
                     <param id="1" name="URL">&quot;veskod.comli.com/login1.php&quot;</param>
                     <param id="2" name="Data">&quot;L=&quot;&amp; URLEncode(Username.Text)&amp;&quot;P=&quot;&amp;URLEncode(Password.Text)</param>
                     <param id="3" name="Method">&quot;POST&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1625036455439752">
+            <conditions>
+                <condition id="0" name="On clicked" sid="5057523413689174" type="PlayButton" />
+                <condition disabled="1" id="0" inverted="1" name="Compare text" sid="6854546479173529" type="Username">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="468608724379783" type="Response">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="4962754579603296" type="AJAX">
+                    <param id="0" name="Tag">&quot;Login&quot;</param>
+                    <param id="1" name="URL">&quot;http://veskod.comli.com/php/login1.php?L=&quot;&amp; Username.Text &amp;&quot;&amp;P=&quot;&amp; Password.Text</param>
                 </action>
             </actions>
         </event-block>
@@ -88,7 +106,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="9213437789167597">
+        <event-block disabled="1" sid="9213437789167597">
             <conditions>
                 <condition id="3" name="On touched object" sid="6445631860576211" type="Touch">
                     <param id="0" name="Object">Register</param>
@@ -97,6 +115,29 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="2984448194489307" type="System">
                     <param id="0" name="Layout">Register</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5344616114713384">
+            <conditions>
+                <condition id="0" name="On clicked" sid="8720126748062745" type="registerButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5698082863684167" type="System">
+                    <param id="0" name="Layout">Register</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9160204264383222">
+            <conditions>
+                <condition id="-20" name="Is on mobile device" sid="7947700704451249" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Remove CSS file" sid="483412608447993" type="CSSImport">
+                    <param id="0" name="CSS remove">&quot;vesko.css&quot;</param>
+                </action>
+                <action id="0" name="Import CSS file" sid="4744846856605392" type="CSSImport">
+                    <param id="0" name="CSS import">&quot;mobile.css&quot;</param>
                 </action>
             </actions>
         </event-block>
