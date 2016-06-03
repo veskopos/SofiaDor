@@ -46,8 +46,8 @@
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preview browser">(default)</prop>
-        <prop name="Sampling">Linear</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
@@ -286,7 +286,7 @@
         <event-sheet>Category sheet.xml</event-sheet>
         <event-sheet>Finish sheet.xml</event-sheet>
         <event-sheet>History Quiz sheet.xml</event-sheet>
-        <event-sheet>Quiz.xml</event-sheet>
+        <event-sheet>Quiz sheet.xml</event-sheet>
         <event-sheet>Sport Quiz sheet.xml</event-sheet>
         <event-sheet>Music Quiz sheet.xml</event-sheet>
     </event-folder>

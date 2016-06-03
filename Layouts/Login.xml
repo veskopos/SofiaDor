@@ -99,7 +99,7 @@
                 </instance>
                 <instance type="Version" uid="19">
                     <properties>
-                        <text>Ver. 1.0</text>
+                        <text>Ver. 1.2</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-23,700,0</font>
                         <color>255,255,0</color>

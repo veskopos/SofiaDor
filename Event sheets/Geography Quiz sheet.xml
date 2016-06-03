@@ -4,6 +4,19 @@
     <name>Geography Quiz sheet</name>
     <events>
         <variable constant="0" name="score" sid="4004967892979593" static="0" type="number">0</variable>
+        <event-block sid="6220542563645872">
+            <conditions>
+                <condition id="-20" name="Is on mobile device" sid="2035987168326368" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Remove CSS file" sid="9345996988966762" type="CSSImport">
+                    <param id="0" name="CSS remove">&quot;vesko.css&quot;</param>
+                </action>
+                <action id="0" name="Import CSS file" sid="6999718935417819" type="CSSImport">
+                    <param id="0" name="CSS import">&quot;mobile.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" inactive="1" sid="1790042531271515" title="GeoQuestion1">
             <sub-events>
                 <variable constant="0" name="Answer" sid="7134375426694549" static="0" type="text">Витоша</variable>
@@ -386,8 +399,9 @@
                         <action id="-15" name="Set visible" sid="6373548922851724" type="CorrectAnswer">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="9283780236254785" type="System">
-                            <param id="0" name="Layout">Finish</param>
+                        <action id="-12" name="Set group active" sid="2684386440594875" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion4&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -411,6 +425,936 @@
                         <action id="-15" name="Set visible" sid="9572879028357621" type="CorrectAnswer">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-12" name="Set group active" sid="2429219187768522" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion4&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="5807308288020756" title="GeoQuestion4">
+            <sub-events>
+                <variable constant="0" name="Answer" sid="7969100436272633" static="0" type="text">Черни Връх</variable>
+                <event-block sid="2543343233441083">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="9244754448885278" type="Question" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7401919734083945" type="Question">
+                            <param id="0" name="Text">&quot;Най-високия връх на планина до София?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4591584754760767" type="Answer1">
+                            <param id="0" name="Text">&quot;Мусала&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7473672964408704" type="Answer2">
+                            <param id="0" name="Text">&quot;Черни Връх&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2696891734054201">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7682238810436005" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9395190968294468" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="885574747575176" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8586877075941358" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Wrong&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="788651323310524" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7663069050823592" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1741049905980353">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8968443046810063" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="2979563944298126" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6712218206397529" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2293350300190168" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Correct&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="8798666228072772" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5934054796397815" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1160418607776575">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3498798455219354" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5366995132354228" type="System">
+                            <param id="0" name="Variable">Answer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Answer2.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3316334751031553" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5194436499701008" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion4&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2907848143039303" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3622926629500487" type="responeScore">
+                            <param id="0" name="Text">&quot;Your score is: &quot; &amp;score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3086633910095588" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6373548922851724" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5525636324487818" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion5&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4718473138182033">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1224331611906718" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="9514054018854321" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion4&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1005968758342915" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="5972071127563537" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9572879028357621" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="4636410886436232" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion5&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="3213835016212097" title="GeoQuestion5">
+            <sub-events>
+                <variable constant="0" name="Answer" sid="7969100436272633" static="0" type="text">550</variable>
+                <event-block sid="2543343233441083">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="9244754448885278" type="Question" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7401919734083945" type="Question">
+                            <param id="0" name="Text">&quot;На каква надморка височина е София?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4591584754760767" type="Answer1">
+                            <param id="0" name="Text">&quot;790&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7473672964408704" type="Answer2">
+                            <param id="0" name="Text">&quot;550&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2696891734054201">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7682238810436005" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9395190968294468" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="885574747575176" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8586877075941358" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Wrong&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="788651323310524" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7663069050823592" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1741049905980353">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8968443046810063" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="2979563944298126" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6712218206397529" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2293350300190168" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Correct&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="8798666228072772" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5934054796397815" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1160418607776575">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3498798455219354" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5366995132354228" type="System">
+                            <param id="0" name="Variable">Answer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Answer2.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3316334751031553" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5194436499701008" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion5&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2907848143039303" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3622926629500487" type="responeScore">
+                            <param id="0" name="Text">&quot;Your score is: &quot; &amp;score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3086633910095588" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6373548922851724" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5483933803589536" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion6&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4718473138182033">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1224331611906718" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="9514054018854321" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion5&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1005968758342915" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="5972071127563537" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9572879028357621" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="4947194465748336" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion6&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="1406485163698105" title="GeoQuestion6">
+            <sub-events>
+                <variable constant="0" name="Answer" sid="7969100436272633" static="0" type="text">2290</variable>
+                <event-block sid="2543343233441083">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="9244754448885278" type="Question" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7401919734083945" type="Question">
+                            <param id="0" name="Text">&quot;Колко е висок Черни връх?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4591584754760767" type="Answer1">
+                            <param id="0" name="Text">&quot;2290&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7473672964408704" type="Answer2">
+                            <param id="0" name="Text">&quot;1679&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2696891734054201">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7682238810436005" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9395190968294468" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="885574747575176" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8586877075941358" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Correct&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="788651323310524" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7663069050823592" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1741049905980353">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8968443046810063" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="2979563944298126" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6712218206397529" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2293350300190168" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Wrong&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="8798666228072772" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5934054796397815" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1160418607776575">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3498798455219354" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5366995132354228" type="System">
+                            <param id="0" name="Variable">Answer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Answer1.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3316334751031553" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5194436499701008" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion6&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2907848143039303" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3622926629500487" type="responeScore">
+                            <param id="0" name="Text">&quot;Your score is: &quot; &amp;score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3086633910095588" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6373548922851724" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="1577478917369947" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion7&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4718473138182033">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1224331611906718" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="9514054018854321" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion6&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1005968758342915" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="5972071127563537" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9572879028357621" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="2266024653971794" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion7&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="842352068530281" title="GeoQuestion7">
+            <sub-events>
+                <variable constant="0" name="Answer" sid="7969100436272633" static="0" type="text">Зайци</variable>
+                <event-block sid="2543343233441083">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="9244754448885278" type="Question" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7401919734083945" type="Question">
+                            <param id="0" name="Text">&quot;Кои животински видове ги има в горите на София?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4591584754760767" type="Answer1">
+                            <param id="0" name="Text">&quot;Тюлени&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7473672964408704" type="Answer2">
+                            <param id="0" name="Text">&quot;Зайци&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2696891734054201">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7682238810436005" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9395190968294468" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="885574747575176" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8586877075941358" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Wrong&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="788651323310524" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7663069050823592" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1741049905980353">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8968443046810063" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="2979563944298126" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6712218206397529" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2293350300190168" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Correct&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="8798666228072772" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5934054796397815" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1160418607776575">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3498798455219354" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5366995132354228" type="System">
+                            <param id="0" name="Variable">Answer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Answer2.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3316334751031553" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5194436499701008" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion7&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2907848143039303" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3622926629500487" type="responeScore">
+                            <param id="0" name="Text">&quot;Your score is: &quot; &amp;score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3086633910095588" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6373548922851724" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="235183950421521" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion8&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4718473138182033">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1224331611906718" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="9514054018854321" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion7&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1005968758342915" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="5972071127563537" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9572879028357621" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="4864171429409361" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion8&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="4137365603421917" title="GeoQuestion8">
+            <sub-events>
+                <variable constant="0" name="Answer" sid="7969100436272633" static="0" type="text">Да, но вече е изгаснал</variable>
+                <event-block sid="2543343233441083">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="9244754448885278" type="Question" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7401919734083945" type="Question">
+                            <param id="0" name="Text">&quot;Имало ли е вулкан до София?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4591584754760767" type="Answer1">
+                            <param id="0" name="Text">&quot;Да, но вече е изгаснал&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7473672964408704" type="Answer2">
+                            <param id="0" name="Text">&quot;Не&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2696891734054201">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7682238810436005" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9395190968294468" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="885574747575176" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8586877075941358" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Correct&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="788651323310524" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7663069050823592" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1741049905980353">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8968443046810063" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="2979563944298126" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6712218206397529" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2293350300190168" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Wrong&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="8798666228072772" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5934054796397815" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1160418607776575">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3498798455219354" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5366995132354228" type="System">
+                            <param id="0" name="Variable">Answer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Answer1.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3316334751031553" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5194436499701008" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion8&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2907848143039303" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3622926629500487" type="responeScore">
+                            <param id="0" name="Text">&quot;Your score is: &quot; &amp;score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3086633910095588" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6373548922851724" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="2328407702939359" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion9&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4718473138182033">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1224331611906718" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="9514054018854321" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion8&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1005968758342915" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="5972071127563537" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9572879028357621" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="4385584331370687" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion9&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="3564841966204162" title="GeoQuestion9">
+            <sub-events>
+                <variable constant="0" name="Answer" sid="7969100436272633" static="0" type="text">Лилии</variable>
+                <event-block sid="2543343233441083">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="9244754448885278" type="Question" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7401919734083945" type="Question">
+                            <param id="0" name="Text">&quot;Какво цвете има в езерото което е в Борисовата?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4591584754760767" type="Answer1">
+                            <param id="0" name="Text">&quot;Лилии&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7473672964408704" type="Answer2">
+                            <param id="0" name="Text">&quot;Глухарчета&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2696891734054201">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7682238810436005" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9395190968294468" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="885574747575176" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8586877075941358" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Correct&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="788651323310524" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7663069050823592" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1741049905980353">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8968443046810063" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="2979563944298126" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6712218206397529" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2293350300190168" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Wrong&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="8798666228072772" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5934054796397815" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1160418607776575">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3498798455219354" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5366995132354228" type="System">
+                            <param id="0" name="Variable">Answer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Answer1.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3316334751031553" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5194436499701008" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion9&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2907848143039303" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3622926629500487" type="responeScore">
+                            <param id="0" name="Text">&quot;Your score is: &quot; &amp;score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3086633910095588" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6373548922851724" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7418129685781987" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion10&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4718473138182033">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1224331611906718" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="9514054018854321" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion9&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1005968758342915" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="5972071127563537" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9572879028357621" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="2619676703115923" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion10&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="8313797699133145" title="GeoQuestion10">
+            <sub-events>
+                <variable constant="0" name="Answer" sid="7969100436272633" static="0" type="text">492 km²</variable>
+                <event-block sid="2543343233441083">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="9244754448885278" type="Question" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7401919734083945" type="Question">
+                            <param id="0" name="Text">&quot;Колко е площта на София?&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4591584754760767" type="Answer1">
+                            <param id="0" name="Text">&quot;578 km²&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7473672964408704" type="Answer2">
+                            <param id="0" name="Text">&quot;492 km²&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2696891734054201">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7682238810436005" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9395190968294468" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="885574747575176" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8586877075941358" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Wrong&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="788651323310524" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7663069050823592" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1741049905980353">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8968443046810063" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="2979563944298126" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6712218206397529" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2293350300190168" type="CorrectAnswer">
+                            <param id="0" name="Text">&quot;Correct&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="8798666228072772" type="CorrectAnswer">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5934054796397815" type="CorrectAnswer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1160418607776575">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3498798455219354" type="Touch">
+                            <param id="0" name="Object">Answer2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5366995132354228" type="System">
+                            <param id="0" name="Variable">Answer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Answer2.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3316334751031553" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5194436499701008" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion10&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2907848143039303" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3622926629500487" type="responeScore">
+                            <param id="0" name="Text">&quot;Your score is: &quot; &amp;score</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3086633910095588" type="Answer2">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6373548922851724" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="9283780236254785" type="System">
+                            <param id="0" name="Layout">Finish</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4718473138182033">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1224331611906718" type="Touch">
+                            <param id="0" name="Object">Answer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="9514054018854321" type="System">
+                            <param id="0" name="Group name">&quot;GeoQuestion10&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1005968758342915" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="5972071127563537" type="Answer1">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9572879028357621" type="CorrectAnswer">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="8010608856847491" type="System">
                             <param id="0" name="Layout">Finish</param>
                         </action>
@@ -418,18 +1362,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="6220542563645872">
-            <conditions>
-                <condition id="-20" name="Is on mobile device" sid="2035987168326368" type="System" />
-            </conditions>
-            <actions>
-                <action id="1" name="Remove CSS file" sid="9345996988966762" type="CSSImport">
-                    <param id="0" name="CSS remove">&quot;vesko.css&quot;</param>
-                </action>
-                <action id="0" name="Import CSS file" sid="6999718935417819" type="CSSImport">
-                    <param id="0" name="CSS import">&quot;mobile.css&quot;</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
